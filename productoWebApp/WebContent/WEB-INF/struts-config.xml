@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+    	<form-bean name="categoriaForm" type="ec.com.technoloqie.productoWeb.controlador.form.CategoriaForm" />
+    	<form-bean name="seleccionForm" type="ec.com.technoloqie.productoWeb.controlador.form.SeleccionForm" />
+	</form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        <action name="categoriaForm" path="/ingresar" scope="request" type="ec.com.technoloqie.productoWeb.controlador.action.CategoriaAction">
+        	<forward name="categoriajsp" path="/categoria.jsp" />
+        </action>
+        <action name="seleccionForm" path="/listado" scope="request" type="ec.com.technoloqie.productoWeb.controlador.action.ProductoAction">
+        	<forward name="productojsp" path="/pages/producto/producto.jsp" />
+        </action>
+    </action-mappings>
+    
+    <!-- <message-resources parameter="com/myapp/struts/ApplicationResource"/> -->    
+  
+</struts-config>
