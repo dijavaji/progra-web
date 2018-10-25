@@ -17,7 +17,7 @@ public class ConexionDb {
 		Connection cn = null;
 		try{
 			Class.forName(driver).newInstance();
-			cn = DriverManager.getConnection(cadenacon, "root", "labcom,2015");
+			cn = DriverManager.getConnection(cadenacon, "desarrollo", "desarrollo");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

@@ -20,9 +20,9 @@ public class ClienteGestor {
 		boolean estado = false;
 		try {
 			Connection cn = dt.getConexion();
-			String query = "";
-			query += "" + vf.getUsuario();
-			query += "" + vf.getPassword();
+			String query = "SELECT NOMBRE, PASS FROM USUARIO ";
+			query += "WHERE NOMBRE ='" + vf.getUsuario();
+			query += "' AND PASS = '" + vf.getPassword() + "'";
 			
 			Statement st = cn.createStatement();
 			ResultSet rs = st.executeQuery(query);
@@ -36,8 +36,8 @@ public class ClienteGestor {
 	}
 
 	public void registrar(RegistroForm rf) {
-		String query = "INSERT INTO CLIENTE (NOMBRE,USUARIO, PASS)";
-		query += "VALUES ('"+ rf.getNombre()+"','"+rf.getUsuario()+"','"+rf.getPassword()+"')";
+		String query = "INSERT INTO USUARIO(NOMBRE, APELLIDO, PASS, TIPO_USUARIO_ID, E_MAIL)";
+		query += "VALUES ('"+ rf.getNombre()+"','"+rf.getApellidos()+"','"+rf.getPassword()+"'"+", 3,'"+rf.getEmail()+"')";
 		System.out.print(query);
 		try {
 			int i;

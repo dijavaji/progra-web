@@ -15,8 +15,8 @@
 				<td> <html:text property="nombre"></html:text> </td>
 			</tr>
 			<tr>
-				<td> usuario </td>
-				<td> <html:text property="usuario"></html:text> </td>
+				<td> apellido </td>
+				<td> <html:text property="apellidos"></html:text> </td>
 			</tr>
 			<tr>
 				<td> password </td>
@@ -36,4 +36,4 @@
 	</html:form>
 
 </body>
-</html>
+</html:html>

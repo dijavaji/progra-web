@@ -7,9 +7,10 @@
 <title>jsp page</title>
 </head>
 <body>
-	<h1>Bienvenido a mi pagina <i>
-		<bean:write name= "ValidacionForm" property="usuario"/>
-		</i>
+	<h1>Bienvenido a mi pagina 
 	</h1>
+	<i>
+		<bean:write name= "validacionForm" property="usuario"/>
+		</i>
 </body>
 </html>
