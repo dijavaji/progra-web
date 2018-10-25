@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Bienvenido a mi pagina <i>
-		<bean: write name= "ValidacionForm" property="usuario"/>
-	</h1></i>
+		<bean:write name= "ValidacionForm" property="usuario"/>
+		</i>
+	</h1>
 </body>
 </html>

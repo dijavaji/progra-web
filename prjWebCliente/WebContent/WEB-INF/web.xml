@@ -35,7 +35,7 @@
 	
 	<context-param>
 		<param-name>cadenacon</param-name>
-		<param-value>jdbc:mysql://127.0.0.1/test</param-value>
+		<param-value>jdbc:mysql://192.168.1.100:3306/db_desarrollo</param-value>
 	</context-param>
 	<welcome-file-list>
 	  <welcome-file>index.jsp</welcome-file>
