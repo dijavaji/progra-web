@@ -14,7 +14,7 @@
 	<%if (request.getParameter("numCedula")!= null && request.getParameter("numCedula") != "") 
 	{%>
 		<jsp:useBean id="obj" class="ec.com.technoloqie.personaapp.controlador.Persona"></jsp:useBean>
-		<jsp:setProperty property="obj" name="*"/>
+		<jsp:setProperty property="*" name="obj"/>
 	<%
 		obj.procedimientoConexion();
 		obj.procedimientoConsultar();
