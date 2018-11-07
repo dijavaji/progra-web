@@ -40,7 +40,7 @@ public class Persona implements HttpSessionBindingListener{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-			conexion = DriverManager.getConnection("jdbc:mysql://192.168.1.100:3306/db_desarrollo","desarrollo","desarrollo");
+			conexion = DriverManager.getConnection("jdbc:mysql://192.168.1.100:3306/db_prueba","usrprueba","usrprueba");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
