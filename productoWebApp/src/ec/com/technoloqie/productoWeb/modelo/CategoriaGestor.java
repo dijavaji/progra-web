@@ -32,6 +32,24 @@ public class CategoriaGestor {
         }
         return conjuntoCategoria;
     }
+	
+	public ArrayList<String> consultaCategoriaProducto(){
+        ArrayList <String> conjuntoCategoria = new ArrayList<String>();
+        try {
+            Connection cn = con.getConexion();
+            Statement st = cn.createStatement();
+            String cadenaSql = "SELECT C.NOMBRE, P.NOMBRE FROM CATEGORIA C JOIN PRODUCTO P ON C.CATEGORIA_ID=P.CATEGORIA_ID";
+            ResultSet rs = st.executeQuery(cadenaSql);
+            
+            while (rs.next()){
+                conjuntoCategoria.add(rs.getString("C.NOMBRE") +"--" +rs.getString("P.NOMBRE"));
+            }
+            
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+        return conjuntoCategoria;
+    }
 
 	public ConexionDB getCon() {
 		return con;
