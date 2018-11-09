@@ -50,6 +50,24 @@ public class CategoriaGestor {
         }
         return conjuntoCategoria;
     }
+	
+	public ArrayList<String> consultaCategoriaLike(Integer codCategoria){
+        ArrayList <String> conjuntoCategoria = new ArrayList<String>();
+        try {
+            Connection cn = con.getConexion();
+            Statement st = cn.createStatement();
+            String cadenaSql = "SELECT CATEGORIA_ID FROM CATEGORIA WHERE CATEGORIA_ID LIKE '" + codCategoria+"%'";
+            ResultSet rs = st.executeQuery(cadenaSql);
+            
+            while (rs.next()){
+                conjuntoCategoria.add(rs.getString("CATEGORIA_ID"));
+            }
+            
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+        return conjuntoCategoria;
+    }
 
 	public ConexionDB getCon() {
 		return con;

@@ -22,9 +22,9 @@
 
     <action-mappings>
         
-        <action name="categoriaProductoForm" path="/ingresar" scope="request" type="ec.com.technoloqie.productoWeb.controlador.action.CategoriaAction">
-        	<!-- <forward name="categoriajsp" path="/categoria.jsp" /> -->
-        	<forward name="categoriaProductojsp" path="/pages/categoriaProducto.jsp" />
+        <action name="categoriaForm" path="/ingresar" scope="request" type="ec.com.technoloqie.productoWeb.controlador.action.CategoriaAction">
+        	 <forward name="categoriajsp" path="/categoria.jsp" />
+        	<!-- <forward name="categoriaProductojsp" path="/pages/categoriaProducto.jsp" /> -->
         </action>
         <action name="seleccionForm" path="/listado" scope="request" type="ec.com.technoloqie.productoWeb.controlador.action.ProductoAction">
         	<forward name="productojsp" path="/pages/producto/producto.jsp" />

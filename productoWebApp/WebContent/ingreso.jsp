@@ -10,7 +10,7 @@
 <body>
 	<center>
 		<html:form action="/ingresar" method="POST">
-			<html:text property="bandera" value="Bienvenido al sistema de consulta" size="35"></html:text>
+			<html:text property="bandera" value="" size="35"></html:text>
 			</p></p>
 			<html:submit property="submit" value="Ingresar al sistema"></html:submit>
 		</html:form>

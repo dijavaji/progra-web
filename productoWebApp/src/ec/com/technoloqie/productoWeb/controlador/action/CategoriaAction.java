@@ -26,7 +26,7 @@ public class CategoriaAction extends Action{
 //	    return mapping.findForward("categoriajsp");
 //	}
 	
-	@Override
+	/*@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws  Exception{
 	    String driver = this.getServlet().getServletContext().getInitParameter("driver");
 	    String cadenaConexion = this.getServlet().getServletContext().getInitParameter("cadenaConexion");
@@ -35,6 +35,16 @@ public class CategoriaAction extends Action{
 	    CategoriaGestor catGestor = new CategoriaGestor(driver, cadenaConexion);
 	    cb.setCategoriaProducto(catGestor.consultaCategoriaProducto());
 	    return mapping.findForward("categoriaProductojsp");
+	}*/
+	
+	@Override
+	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws  Exception{
+		 	String driver = this.getServlet().getServletContext().getInitParameter("driver");
+		    String cadenaConexion = this.getServlet().getServletContext().getInitParameter("cadenaConexion");
+		    
+		    CategoriaForm cb = (CategoriaForm) form;
+		    CategoriaGestor catGestor = new CategoriaGestor(driver, cadenaConexion);
+		    cb.setCodigoCategoria(catGestor.consultaCategoriaLike(Integer.parseInt(cb.getBandera())));
+		    return mapping.findForward("categoriajsp");
 	}
-
 }
